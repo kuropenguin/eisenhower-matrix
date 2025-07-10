@@ -35,11 +35,20 @@ This is a React + TypeScript Eisenhower Matrix application built with Vite for t
 - Lucide React for icons
 
 **Project Structure:**
-- `src/App.tsx` - Main application component with drag-and-drop logic
-- `src/components/` - Reusable UI components (QuadrantCard, TaskCard)
-- `src/types/index.ts` - TypeScript type definitions for Task and Quadrant
-- `src/data/quadrants.ts` - Static configuration for the four matrix quadrants
-- `src/hooks/useTasks.ts` - Custom hook for task state management
+- `src/app/` - Application entry point and main components
+  - `App.tsx` - Main application component with drag-and-drop logic
+  - `main.tsx` - Application entry point
+- `src/features/tasks/` - Task management feature
+  - `components/` - QuadrantCard, TaskCard components
+  - `hooks/` - useTasks hook for task state management
+  - `types/` - Task and Quadrant type definitions
+  - `data/` - Static configuration for quadrants
+  - `api/` - API calls for task management (future)
+- `src/shared/` - Shared utilities and components
+  - `components/ui/` - Reusable UI components
+  - `hooks/` - Shared custom hooks
+  - `types/` - Common type definitions
+  - `api/` - API utilities and configurations
 
 ### Key Components
 
@@ -99,3 +108,17 @@ The project includes Docker configuration for both development and production en
 - Includes proper health checks
 - Configurable through environment variables
 - Follows container best practices
+
+## Architecture Benefits
+
+**Feature-Based Structure:**
+- Related files are co-located within features
+- Easy to add new features without affecting existing ones
+- Clear separation between shared and feature-specific code
+- Scalable for future backend API integration
+- Supports team development with clear ownership boundaries
+
+**Backend Integration Ready:**
+- Structure aligns with planned Node.js + Express backend
+- API layer prepared for future database persistence
+- Domain-driven design facilitates full-stack development

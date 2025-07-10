@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Target, BarChart3 } from 'lucide-react';
-import { QuadrantCard } from './components/QuadrantCard';
-import { quadrants } from './data/quadrants';
-import { useTasks } from './hooks/useTasks';
-import { Task } from './types';
+import { QuadrantCard } from '../features/tasks/components/QuadrantCard';
+import { quadrants } from '../features/tasks/data/quadrants';
+import { useTasks } from '../features/tasks/hooks/useTasks';
+import { Task } from '../features/tasks/types';
 
 function App() {
   const { tasks, addTask, updateTask, deleteTask, moveTask, getTasksByQuadrant } = useTasks();
